@@ -63,7 +63,7 @@ const HomePage = () => {
         </Form>
       </div>
 
-      <div className={maxTasks === allTasks.length ? "show" : "hide"}>
+      {maxTasks === allTasks.length && (
         <Row>
           <FormInput
             value={newMaxTasks}
@@ -76,7 +76,7 @@ const HomePage = () => {
             </Button>
           </Col>
         </Row>
-      </div>
+      )}
 
       <Row className="button-wrapper">
         <Col md={{ span: 6, offset: 3 }}>
