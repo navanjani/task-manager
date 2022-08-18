@@ -12,7 +12,7 @@ const TaskCard = ({ task }) => {
 
   const { id, name, completed } = task;
   return (
-    <div className=" container task-container">
+    <div className="task-container">
       <Card className="task">
         <Row>
           <Col>

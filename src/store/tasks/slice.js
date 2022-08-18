@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  maxTasks: 10,
+  maxTasks: 5,
   allTasks: [
     { id: 1, name: "Pick up new glasses", completed: true },
     { id: 2, name: "Buy airco", completed: false },
@@ -40,6 +40,9 @@ export const tasksSlice = createSlice({
     toggleShowCompleted: (state, action) => {
       state.showCompletedTasks = !state.showCompletedTasks;
     },
+    liftMaxTasks: (state, action) => {
+      state.maxTasks = action.payload;
+    },
   },
 });
 
@@ -48,6 +51,7 @@ export const {
   removeTask,
   toggleTaskCompleted,
   toggleShowCompleted,
+  liftMaxTasks,
 } = tasksSlice.actions;
 
 export default tasksSlice.reducer;
